@@ -1,30 +1,36 @@
 package com.example.ec.domain;
 
-import lombok.Getter;
-import lombok.Setter;
+
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import java.io.Serializable;
 import java.util.Objects;
 
 @Entity
-public class TourPackage {
 
+public class TourPackage implements Serializable {
     @Id
-    @Getter
     private String code;
 
     @Column
-    @Getter @Setter
     private String name;
 
     protected TourPackage() {
     }
 
-    public TourPackage(String code,String name) {
-        this.code=code;
-        this.name=name;
+    public TourPackage(String code, String name) {
+        this.code = code;
+        this.name = name;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public String getName() {
+        return name;
     }
 
     @Override
@@ -32,8 +38,9 @@ public class TourPackage {
         return "TourPackage{" +
                 "code='" + code + '\'' +
                 ", name='" + name + '\'' +
-                '}' ;
+                '}';
     }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -47,6 +54,4 @@ public class TourPackage {
     public int hashCode() {
         return Objects.hash(code, name);
     }
-
-
 }
