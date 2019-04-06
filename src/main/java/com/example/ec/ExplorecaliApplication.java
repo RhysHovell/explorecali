@@ -1,6 +1,5 @@
 package com.example.ec;
 
-
 import com.example.ec.domain.Difficulty;
 import com.example.ec.domain.Region;
 import com.example.ec.services.TourPackageService;
@@ -15,7 +14,6 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.io.IOException;
-
 import java.util.List;
 
 import static com.example.ec.ExplorecaliApplication.TourFromFile.importTours;
